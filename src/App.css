@@ -1,38 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #3f3161;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+  font-size: 1.75rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.TodoWrapper {
+  background: #1A1A40;
+  margin-top: 5rem;
+  padding: 2rem;
+  border-radius: 5px;
+}
+
+.TodoForm {
+  width: 100%;
+}
+
+.todo-input {
+  outline: none;
+  background: none;
+  border: 1px solid #8758ff;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  width: 300px;
+  color: #fff;
+}
+
+.todo-input::placeholder {
+  color: #ffffff4d;
+}
+
+.todo-btn {
+  background: rgb(13, 126, 13);
+  color: #fff;
+  border: none;
+  padding: 0.55rem;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Adding a smooth transition effect */
+
+  /* Hover effect */
+  &:hover {
+    background-color: rgb(20, 100, 20); /* New background color on hover */
   }
+  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Todo {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: rgb(13, 126, 13);
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); ; /* Adding a smooth transition effect */
+
+  /* Hover effect */
+  &:hover {
+    background-color: rgb(20, 100, 20); /* New background color on hover */
+    transform: scale(0.95); /* Shrink the element on hover */
+  }
 }
 
-.App-link {
-  color: #61dafb;
+.fa-trash {
+  margin-left: 0.75rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.completed {
+  color: #1b1330;
+  text-decoration: line-through;
 }
